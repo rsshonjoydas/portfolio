@@ -1,5 +1,4 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
+import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
 
@@ -11,8 +10,7 @@ function MyApp({ Component, pageProps }: any) {
         <Sidebar />
       </div>
       <div className="flex flex-col col-span-12 bg-white rounded-2xl dark:text-white lg:col-span-9">
-        {/* //!navbar */}
-        about
+        <Navbar />
         <Component {...pageProps} />
       </div>
     </div>
