@@ -4,7 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        kaushan: 'Kaushan Script'
+      },
+      colors: {
+        green: {
+          DEFAULT: '#00f260'
+        }
+      }
+    },
   },
   plugins: [],
 }
