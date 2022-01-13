@@ -15,7 +15,7 @@ const Home = () => {
         className="p-4 bg-gray-400 flex-grow"
         style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}
       >
-        <h6 className="my-3 text-xl font-bold tracking-wide">What I Offer</h6>
+        <h6 className="my-3 text-xl font-bold tracking-wide text-purple-300">What I Offer</h6>
         <div className="grid grid-6 gap-6 md:grid-cols-2">
           {servicesData.map((service) => (
             <div key={service.id} className="p-2 bg-gray-200 rounded-lg col-span-2 md:col-span-1">

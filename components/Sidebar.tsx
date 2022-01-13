@@ -8,7 +8,7 @@ const Sidebar = () => (
   <div>
     <Img src={logo} alt="logo" className="w-32 h-32 rounded-full mx-auto" />
     <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-      <span className="text-green">Shonjoy </span>Das
+      <span className="text-purple-400">Shonjoy </span>Das
     </h3>
     <p className="px-2 py-2 my-3 bg-gray-200 rounded-full">Web Developer</p>
     <a
@@ -19,7 +19,7 @@ const Sidebar = () => (
       Download Resume
     </a>
     {/* //? social icons */}
-    <div className="flex justify-around my-5 text-green mx-auto w-9/12 md:w-full">
+    <div className="flex justify-around my-5 text-purple-400 mx-auto w-9/12 md:w-full">
       <a href="/">
         <FontAwesomeIcon
           icon={faYoutube}
@@ -54,16 +54,13 @@ const Sidebar = () => (
     {/* //? email me */}
     <button
       type="button"
-      className="bg-gradient-to-r from-green to-blue-400 w-8/12 py-2 px-5 text-white my-2 rounded-full focus:outline-none"
+      className="gradient-color w-8/12 py-2 px-5 text-white my-2 rounded-full focus:outline-none"
       onClick={() => window.open('mailto:rsshonjoydas@gmail.com')}
     >
       Email Me
     </button>
     {/* //? toggle theme */}
-    <button
-      type="button"
-      className="bg-gradient-to-r from-green to-blue-400 w-8/12 py-2 px-5 text-white my-2 rounded-full"
-    >
+    <button type="button" className="gradient-color w-8/12 py-2 px-5 text-white my-2 rounded-full">
       Toggle Theme
     </button>
   </div>

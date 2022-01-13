@@ -9,6 +9,24 @@ import {
 import { faCode, faDatabase, faImages, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { ISkill } from '../interface/skillType';
 
+const skills = [
+  {
+    id: 1,
+    heading: 'Education',
+    sebHeading: 'Computer Science Engineering',
+    title: 'Academy of Technology (2017-2021)',
+    description:
+      'I am currently pursuing B.tech in Computer Science Engineering from Academy of Technology',
+  },
+  {
+    id: 2,
+    heading: 'Experience',
+    sebHeading: 'Software Developer Jr.',
+    title: 'RS Software',
+    description: "I don't know why I am doing this job",
+  },
+];
+
 const languages: ISkill[] = [
   {
     id: 1,
@@ -75,4 +93,4 @@ export const tools: ISkill[] = [
   },
 ];
 
-export default { languages, tools };
+export default { skills, languages, tools };

@@ -15,10 +15,10 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between px-5 py-5 my-3">
-      <span className="font-bold text-xl border-b-4 border-green text-green md:text-2xl">
+      <span className="font-bold text-xl border-b-4 border-purple-400 text-purple-400 md:text-2xl">
         {activeItem}
       </span>
-      <div className="font-lg text-red-400 font-bold flex space-x-5">
+      <div className="font-lg text-indigo-400 font-bold flex space-x-5">
         {/* {activeItem !== 'About' && (
           <Link href="/about">
             <span onClick={() => setActiveItem('About')}>About</span>

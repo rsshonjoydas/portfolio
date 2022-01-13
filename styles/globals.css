@@ -9,3 +9,9 @@ body {
   font-family: sans-serif;
   color: #354358;
 }
+
+@layer components {
+  .gradient-color {
+    @apply bg-gradient-to-r from-indigo-300 to-purple-400;
+  }
+}
