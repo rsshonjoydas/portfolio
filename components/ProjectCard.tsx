@@ -17,6 +17,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({ project }) => {
         alt={name}
         width="400"
         height="200"
+        layout="responsive"
         className="cursor-pointer"
         onClick={() => setShowDetail(true)}
       />

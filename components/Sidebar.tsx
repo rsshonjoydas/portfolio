@@ -2,8 +2,7 @@ import { faGithub, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-
 import { faDownload, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTheme } from 'next-themes';
-import Img from 'next/image';
-import logo from '../public/rs.jpg';
+import Image from 'next/image';
 
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
@@ -13,7 +12,14 @@ const Sidebar = () => {
   };
   return (
     <div>
-      <Img src={logo} alt="logo" className="w-32 h-32 rounded-full mx-auto" />
+      <Image
+        src="https://res.cloudinary.com/dmgbtukr2/image/upload/v1642085457/avatar/rs_xedovq.jpg"
+        alt="logo"
+        height="120"
+        width="120"
+        quality="100"
+        className="rounded-full mx-auto"
+      />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-purple-400">Shonjoy </span>Das
       </h3>
