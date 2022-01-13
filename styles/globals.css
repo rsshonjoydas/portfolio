@@ -11,7 +11,11 @@ body {
 }
 
 @layer components {
-  .gradient-color {
+  .gradient-light {
     @apply bg-gradient-to-r from-indigo-300 to-purple-400;
+  }
+
+  .gradient-dark {
+    @apply bg-gradient-to-r from-dark-200 via-dark-400 to-dark;
   }
 }

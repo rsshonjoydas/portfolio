@@ -8,7 +8,7 @@ const resume = () => (
       {data.skills.map((skill: any) => (
         <div>
           <h5 className="my-3 text-2xl font-bold text-purple-300">{skill.heading}</h5>
-          <div>
+          <div className="font-medium dark:text-gray-200">
             <h5 className="my-2 text-xl font-bold">{skill.subHeading}</h5>
             <p className="font-semibold">{skill.title}</p>
             <p className="my-3">{skill.description}</p>
