@@ -24,6 +24,7 @@
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "react/no-danger": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
     "indent": 0,
     "linebreak-style": 0,
     "react/function-component-definition": "off",
