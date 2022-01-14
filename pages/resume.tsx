@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import data from '../adapters/skillData';
 import variants from '../animation/inUp';
 import routeAnimation from '../animation/routeAnimation';
@@ -12,6 +13,9 @@ const resume = () => (
     exit="exit"
     className="px-6 py-2 text-gray-600"
   >
+    <Head>
+      <title>RS Shonjoy | Resume</title>
+    </Head>
     {/* //? education & skills */}
     <div className="grid gap-6 md:grid-cols-2">
       {data.skills.map((skill: any) => (

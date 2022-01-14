@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import servicesData from '../adapters/servicesData';
 import variants from '../animation/inUp';
 import routeAnimation from '../animation/routeAnimation';
@@ -13,6 +14,9 @@ const Home = () => (
     exit="exit"
     className="flex flex-col px-6 pt-1 text-gray-600 dark:bg-gray-600 dark:text-gray-200 flex-grow"
   >
+    <Head>
+      <title>RS Shonjoy | Web Developer</title>
+    </Head>
     <h5 className="my-3 font-medium">
       I am currently pursuing B.Tech Degree(Final Year) in Computer Science Engineering from Academy
       of Technology. I have 3+ years of experience in Web Development and I have a Youtube Channel

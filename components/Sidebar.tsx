@@ -36,19 +36,19 @@ const Sidebar = () => {
       </a>
       {/* //? social icons */}
       <div className="flex justify-around my-5 text-purple-400 mx-auto w-9/12 md:w-full">
-        <a href="/">
+        <a href="/" aria-label="YouTube">
           <FontAwesomeIcon
             icon={faYoutube}
             className="w-8 h-8 cursor-pointer text-xl hover:text-red-500"
           />
         </a>
-        <a href="/">
+        <a href="/" aria-label="GitHub">
           <FontAwesomeIcon
             icon={faGithub}
             className="w-8 h-8 cursor-pointer text-xl hover:text-gray-500"
           />
         </a>
-        <a href="/">
+        <a href="/" aria-label="Linkedin">
           <FontAwesomeIcon
             icon={faLinkedinIn}
             className="w-8 h-8 cursor-pointer text-xl hover:text-blue-400"

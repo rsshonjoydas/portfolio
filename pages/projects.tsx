@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import { useState } from 'react';
 import projectData from '../adapters/projectData';
 import inUp from '../animation/inUp';
@@ -34,6 +35,9 @@ const Projects = () => {
       className="px-5 py-2 overflow-auto scroll-smooth hover:scroll-auto"
       style={{ height: '65vh' }}
     >
+      <Head>
+        <title>RS Shonjoy | Projects</title>
+      </Head>
       <ProjectNavbar handleFilterCategory={handleFilterCategory} active={active} />
 
       <motion.div
