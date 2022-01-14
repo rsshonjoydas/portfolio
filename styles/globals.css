@@ -19,3 +19,12 @@ body {
     @apply bg-gradient-to-r from-dark-200 via-dark-400 to-dark;
   }
 }
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right bottom, #c084fc, #a5b4fc);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
