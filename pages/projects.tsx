@@ -11,6 +11,7 @@ import { Category } from '../interface/projectType';
 const Projects = () => {
   const [projects, setProjects] = useState(projectData);
   const [active, setActive] = useState('all');
+  const [showDetail, setShowDetail] = useState<number | null>(null);
 
   const handleFilterCategory = (category: Category | 'all') => {
     if (category === 'all') {
@@ -47,7 +48,7 @@ const Projects = () => {
             key={project.id}
             className="col-span-12 sm:col-span-6 lg:col-span-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-500"
           >
-            <ProjectCard project={project} />
+            <ProjectCard project={project} showDetail={showDetail} setShowDetail={setShowDetail} />
           </motion.div>
         ))}
       </motion.div>

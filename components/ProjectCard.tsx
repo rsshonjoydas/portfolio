@@ -1,17 +1,21 @@
+/* eslint-disable no-unused-vars */
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobeAsia, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import inUp from '../animation/inUp';
 import stagger from '../animation/stagger';
 import { IProject } from '../interface/projectType';
 
-const ProjectCard: FunctionComponent<{ project: IProject }> = ({ project }) => {
-  const { name, description, imageURL, deployedURL, gitHubURL, keyTechs } = project;
-  const [showDetail, setShowDetail] = useState(false);
+const ProjectCard: FunctionComponent<{
+  project: IProject;
+  showDetail: null | number;
+  setShowDetail: (id: number | null) => void;
+}> = ({ project, showDetail, setShowDetail }) => {
+  const { id, name, description, imageURL, deployedURL, gitHubURL, keyTechs } = project;
 
   return (
     <div>
@@ -22,19 +26,19 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({ project }) => {
         height="200"
         layout="responsive"
         className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
       />
       <p className="my-2 text-center">{name}</p>
 
-      {showDetail && (
+      {showDetail === id && (
         <motion.div
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 top-0 left-0 z-10 h-auto w-full gap-x-12 absolute text-gray-500 dark:text-gray-200 bg-gray-100 dark:bg-dark-100"
+          className="grid md:grid-cols-2 top-0 left-0 p-2 md:p-10 z-10 h-auto w-full gap-x-12 absolute text-gray-500 dark:text-gray-200 bg-gray-100 dark:bg-dark-100 rounded-lg"
         >
           <div>
-            <motion.div variants={inUp}>
+            <motion.div variants={inUp} className="border-4 border-gray-500">
               <Image src={imageURL} alt={name} width="400" height="200" layout="responsive" />
             </motion.div>
             <motion.div variants={stagger} className="flex justify-center my-4 space-x-3">
@@ -76,7 +80,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({ project }) => {
 
           <button
             type="button"
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
             className="absolute p-1 rounded-full top-3 right-3 focus:outline-none bg-gray-200 dark:bg-gray-500"
           >
             <FontAwesomeIcon icon={faTimes} />
