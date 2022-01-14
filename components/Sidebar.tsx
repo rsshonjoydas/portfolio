@@ -27,7 +27,8 @@ const Sidebar = () => {
         Web Developer
       </p>
       <a
-        href="/"
+        href="/images/blink.jpg"
+        download="blink.jpg"
         className="px-2 py-2 my-3 text-gray-500 font-bold bg-gray-200 dark:bg-dark-100 dark:text-gray-200 rounded-full flex items-center justify-center"
       >
         <FontAwesomeIcon icon={faDownload} className="w-8 h-8 mr-2" />
